@@ -1,9 +1,9 @@
 
 ' The input metadata document (.mdd) file
-#define INPUTMDM "R:\share\TEST\237101030.mdd"
+#define INPUTMDM "R:\share\TEST\old.mdd"
 
 ' The output metadata document (.mdd) file
-#define OUTPUTMDM "R:\share\TEST\237101030New.mdd"
+#define OUTPUTMDM "R:\share\TEST\New.mdd"
 
 ' Copy the museum.mdd sample file so that
 ' we do not update the original file...
