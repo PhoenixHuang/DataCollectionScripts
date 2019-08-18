@@ -1,0 +1,17 @@
+sub ChangeMTDHeader(byval mtdname as string, byvla newheader as string)    
+        Dim t As New TOMLib.Document
+        t.Open(mtdname)
+        Dim t1 As TOMLib.Table
+        For Each t1 In t.Tables
+            Dim t2 As Integer
+            For t2 = 0 To t1.Axes.Count - 1
+                Dim t3 As TOMLib.Axis
+                t3 = t1.Axes.Item(t2)
+                If t3.Name = "Top" Then
+                    t3.Specification = newheader
+                End If
+            Next
+        Next
+        t.Save(mtdname, IncludeResults:=True)
+end sub
+    
