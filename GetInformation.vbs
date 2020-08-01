@@ -12,12 +12,12 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 fso.CopyFile(INPUTMDM, OUTPUTMDM, True)
 
 dim f1, f2, f3, f4, f5,f6
-set f1=fso.CreateTextFile("DataMap.sql")
-set f2=fso.CreateTextFile("CodeMap.sql")      
-set f3=fso.CreateTextFile("ExcelMap.csv")      
-set f4=fso.CreateTextFile("Transform.sql")      
-set f5=fso.CreateTextFile("FinalDataTable.sql")    
-set f6=fso.CreateTextFile("QlikDataLoad.sql")  
+set f1=fso.CreateTextFile("DataMap.sql",true,true)
+set f2=fso.CreateTextFile("CodeMap.sql",true,true)      
+set f3=fso.CreateTextFile("ExcelMap.csv",true,true)      
+set f4=fso.CreateTextFile("Transform.sql",true,true)      
+set f5=fso.CreateTextFile("FinalDataTable.sql",true,true)    
+set f6=fso.CreateTextFile("QlikDataLoad.sql",true,true)  
 ' Make sure that the read-only attribute is not set
 Set f = fso.GetFile(OUTPUTMDM)
 If f.Attributes.BitAnd(1) Then
